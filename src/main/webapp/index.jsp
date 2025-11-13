@@ -4,7 +4,7 @@
     <title>Servlet Demo</title>
 </head>
 <body>
-    <h1>Hello from JSP!</h1>
+    <h1>Hello from JSP! and using Annotations</h1>
     <p>Current time: <%= new java.util.Date() %></p>
 </body>
 </html>
