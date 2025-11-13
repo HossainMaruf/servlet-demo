@@ -9,7 +9,9 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("message", "Hello From SERVLET");
+        req.setAttribute("name", "Md. Maruf Hossain");
+        req.setAttribute("email", "maruficepustian@gmail.com");
+        req.setAttribute("designation", "SO-IT");
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }
