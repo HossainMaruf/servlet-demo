@@ -1,12 +1,14 @@
-package com.example.mvc.dao;
+package com.example.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+
+import com.example.model.User;
+
 import java.util.ArrayList;
-import com.example.mvc.model.User;
 
 public class UserDAO {
     String sql = "";

@@ -1,4 +1,4 @@
-package com.example.mvc.controller;
+package com.example.controller;
 
 public class UserController {
     

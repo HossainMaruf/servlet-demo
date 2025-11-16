@@ -1,4 +1,4 @@
-package com.example.mvc.model;
+package com.example.model;
 
 public class User {
    private int id;
