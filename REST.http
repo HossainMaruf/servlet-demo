@@ -1,0 +1,25 @@
+# GET THE HOME PAGE
+GET http://localhost:8080/servlet-demo/
+Content-Type: text/plain
+###
+# GET THE ABOUT PAGE
+GET http://localhost:8080/servlet-demo/about
+Content-Type: text/plain
+###
+# GET THE CONTACT PAGE
+GET http://localhost:8080/servlet-demo/contact
+Content-Type: text/plain
+###
+# GET THE HELP PAGE
+GET http://localhost:8080/servlet-demo/help
+Content-Type: text/plain
+###
+# NOTING TO SERVE
+GET http://localhost:8080/servlet-demo/dashboard
+Content-Type: text/plain
+
+
+
+###
+GET http://localhost:8080/servlet-demo/users
+Content-Type: text/plain 
