@@ -1,24 +1,34 @@
 package com.example.model;
 
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 public class User {
-   private int id;
-   private String name;
-   private String email;
-   private String phone;
-   public User(String name, String email, String phone){
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+   private Map<String, List<String>> fields;
+   public User() {
+        fields = new HashMap<String, List<String>>();
    }
-   public User(int id, String name, String email, String phone){
-        this(name, email, phone);
-        this.id = id;
+   public void set(String key, String value) {
+       fields.computeIfAbsent(key, k -> new ArrayList<String>()).add(value);
    }
-   public int getId() { return id; }
-   public String getName() { return name; }
-   public String getEmail() { return email; }
-   public String getPhone() { return phone; }
-   public void setName(String name) { this.name = name; }
-   public void setEmail(String email) { this.email = email; }
-   public void setPhone(String phone) { this.phone = phone; }
+   public List<String> get(String key) {
+        return fields.getOrDefault(key, new ArrayList<String>());
+   }
+   public List<String> getFields() {
+        return new ArrayList<String>(fields.keySet());
+   }
+}
+
+class Main {
+    public static void main(String[] args) {
+        User user = new User(); 
+        user.set("name", "Maruf Hossain");
+        user.set("name", "Md. Maruf Hossain");
+        user.set("email", "maruficepustian@gmail.com");
+        for (String field : user.getFields()) {
+            System.out.println(field + " = " + user.get(field));  
+        }
+    }
 }
