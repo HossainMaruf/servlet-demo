@@ -1,6 +1,13 @@
-package com.example.schema;
+// package com.example.schema;
 
-public class User {
-    $table->id();
-    $table->string('name')
-}
+// public class User {
+//     $table->id();
+//     $table->string('name')
+// }
+
+
+
+
+/**
+ * User.all()
+ */
