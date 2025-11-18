@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/main/java/com/example/dao/UserDAO.java
 // package com.example.dao;
+=======
+package com.example.utility;
+>>>>>>> 0db812a5e56cd0b03a0cea901bb05ed97fd9abee:src/main/java/com/example/utility/UserDAO.java
 
 // import java.sql.Connection;
 // import java.sql.PreparedStatement;
