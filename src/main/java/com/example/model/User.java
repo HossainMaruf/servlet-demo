@@ -1,8 +1,13 @@
 package com.example.model;
 
+import com.example.annotations.PrimaryKey;
+import com.example.annotations.Unique;
+
 public class User {
+   @PrimaryKey
    private int id;
    private String name;
+   @Unique
    private String email;
    private String phone;
    public User(String name, String email, String phone){
