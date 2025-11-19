@@ -22,10 +22,10 @@ Content-Type: text/plain
 GET http://localhost:8080/servlet-demo/users
 Content-Type: text/plain 
 
-### Migrations Migrate
-GET http://localhost:8080/servlet-demo/migrate
+### Get Generated SQL
+GET http://localhost:8080/servlet-demo/sql
 Content-Type: text/plain 
 
-### Test Database Connection
+### Migrations Migrate
 GET http://localhost:8080/servlet-demo/migrate
 Content-Type: text/plain 
