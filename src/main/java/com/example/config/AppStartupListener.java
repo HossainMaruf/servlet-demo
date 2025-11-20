@@ -1,6 +1,7 @@
 package com.example.config;
 
 import jakarta.servlet.ServletContextListener;
+import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.annotation.WebListener;
 
@@ -14,5 +15,6 @@ public class AppStartupListener implements ServletContextListener {
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         System.out.println("=== Application Stopped ===");
+        AbandonedConnectionCleanupThread.checkedShutdown();
     }
 }
