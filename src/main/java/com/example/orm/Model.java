@@ -58,12 +58,15 @@ public abstract class Model<T extends Model<T>> {
     public List<T> where(String field, Object value) {
         List<T> list = new ArrayList<T>();
         String sql = "SELECT * FROM " + table + " WHERE " + field + " = ?";
-        try(PreparedStatement stmt = con.prepareStatement(sql)) {
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
             stmt.setObject(1, value);
             ResultSet rs = stmt.executeQuery();
-            T obj = modelClass.getDeclaredConstructor().newInstance();
-            while(rs.next()) list.add(obj);
-        } catch(Exception e) {
+            while (rs.next()) {
+                T obj = modelClass.getDeclaredConstructor().newInstance();
+                mapRowToObject(obj, rs);
+                list.add(obj);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return list;

@@ -22,10 +22,20 @@ Content-Type: text/plain
 GET http://localhost:8080/servlet-demo/users
 Content-Type: text/plain 
 
+### Save a User
+POST http://localhost:8080/servlet-demo/users
+Content-Type: application/json
+
+{
+    "name": "Maruf Hossain",
+    "email": "maruficepustian@gmail.com",
+    "phone": "01868089868"
+}
+
 ### Get Generated SQL
 GET http://localhost:8080/servlet-demo/sql
 Content-Type: text/plain 
 
 ### Migrations Migrate
-GET http://localhost:8080/servlet-demo/migrate
+GE http://localhost:8080/servlet-demo/migrate
 Content-Type: text/plain 

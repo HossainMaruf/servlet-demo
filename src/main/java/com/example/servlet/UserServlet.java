@@ -15,7 +15,13 @@ public class UserServlet extends HttpServlet{
         res.setContentType("application/json");
         res.setCharacterEncoding("UTF-8");
         Model<User> model = new User();
-        String json = new Gson().toJson(model.where("email", "maruficepustian@gmail.com"));
+        String json = new Gson().toJson(model.all());
         res.getWriter().write(json);
     }    
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        res.setContentType("text/plain");
+        res.setCharacterEncoding("UTF-8");
+        res.getWriter().write("Reach");
+    }
 }
