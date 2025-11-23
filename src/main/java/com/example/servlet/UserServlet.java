@@ -1,6 +1,9 @@
 package com.example.servlet;
 
 import java.io.IOException;
+import com.google.gson.Gson;
+import com.example.model.User;
+import com.example.orm.Model;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
@@ -11,7 +14,8 @@ public class UserServlet extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         res.setContentType("application/json");
         res.setCharacterEncoding("UTF-8");
-        String json = "{ \"status\": \"success\", \"message\": \"Hello JSON\" }";
+        Model<User> model = new User();
+        String json = new Gson().toJson(model.where("email", "maruficepustian@gmail.com"));
         res.getWriter().write(json);
     }    
 }

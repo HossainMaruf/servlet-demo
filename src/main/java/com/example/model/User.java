@@ -2,18 +2,23 @@ package com.example.model;
 
 import com.example.annotations.PrimaryKey;
 import com.example.annotations.Unique;
+import com.example.orm.Model;
 
-public class User {
+public class User extends Model<User> {
    @PrimaryKey
    private int id;
    private String name;
    @Unique
    private String email;
    private String phone;
+   public User() {
+     super(User.class);
+   }
    public User(String name, String email, String phone){
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+     this();
+     this.name = name;
+     this.email = email;
+     this.phone = phone;
    }
    public User(int id, String name, String email, String phone){
         this(name, email, phone);

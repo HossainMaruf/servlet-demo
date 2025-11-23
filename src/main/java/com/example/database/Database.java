@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.lang.Class;
 import java.util.Properties;
-
 import com.example.utility.ApplicationProperties;
 
 public class Database {
