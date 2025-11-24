@@ -15,7 +15,7 @@ public class UserServlet extends HttpServlet{
         res.setContentType("application/json");
         res.setCharacterEncoding("UTF-8");
         Model<User> model = new User();
-        String json = new Gson().toJson(model.all());
+        String json = new Gson().toJson(model.query().all());
         res.getWriter().write(json);
     }    
     @Override
