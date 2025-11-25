@@ -12,6 +12,7 @@ import javax.management.Query;
 
 import com.example.database.Database;
 import com.example.model.User;
+import com.example.orm.query.DQL;
 
 public abstract class Model<T extends Model<T>> {
     private transient Connection con = null;

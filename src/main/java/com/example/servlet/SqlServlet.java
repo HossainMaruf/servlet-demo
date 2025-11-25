@@ -19,7 +19,11 @@ public class SqlServlet extends HttpServlet{
         res.setContentType("text/plain");
       //   String sql = SqlGenerator.generateSelectAll(User.class);
         Model<User> user = new User();
-        String sql = user.query().all("id", "name", "email").get();
+        String sql = user.query()
+        .all("id", "name")
+        .whereAND("id","=", "10")
+        .whereAND(LEGACY_DO_HEAD, LEGACY_DO_HEAD, LEGACY_DO_HEAD)
+        .whereAND;
         res.getWriter().write(sql);
    } 
 }
